@@ -50,9 +50,9 @@ jobs:
        sudo apt-get update
        sudo apt-get install libgirepository1.0-dev
        sudo apt-get install meson
-       meson build -Dtests=false -Dgtkdoc=false
-       ninja -C build
-       ninja -C build install
+       sudo meson build -Dtests=false -Dgtkdoc=false
+       sudo ninja -C build
+       sudo ninja -C build install
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
